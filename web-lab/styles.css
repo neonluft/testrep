@@ -1,11 +1,32 @@
-body {
-  font-family: system-ui, sans-serif;
-  margin: 0;
-  padding: 2rem;
-  background: #f6f8fa;
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --link-color: #0066cc;
+  --button-bg: #eeeeee;
+  --button-text: #1a1a1a;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+body[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --link-color: #66b3ff;
+  --button-bg: #2a2a2a;
+  --button-text: #f0f0f0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
